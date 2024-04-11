@@ -27,13 +27,13 @@ for col1 in numerical_df.columns:
     ax_box.set(xlabel='')
     
     # st.write('Statistic describle for ' + str(col1) + " :")
-    st.header('Statistic describle for ' + str(col1) + " :")
+    st.subheader('Statistic describle for ' + str(col1) + " :")
 
     stats_categorical = numerical_df[col1].describe().round(2)
     stats_categorical
 
     # st.write('Data visualization for ' + str(col1) + " :")
-    st.header('Data visualization for ' + str(col1) + " :")
+    st.subheader('Data visualization for ' + str(col1) + " :")
     st.pyplot(fig, use_container_width=True)
     st.divider()
 
