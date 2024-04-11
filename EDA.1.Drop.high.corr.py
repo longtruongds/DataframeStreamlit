@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 # data analysis and wrangling
 import pandas as pd
 import numpy as np
@@ -25,8 +22,6 @@ cols = list(numeric_df)
 # move the column to head of list using index, pop and insert
 cols.insert(0, cols.pop(cols.index('SalePrice')))
 heatmap_df = numeric_df.loc[:, cols]
-
-
 
 # Create a heatmap using Seaborn
 plt.figure(figsize=(40, 16))  # Set the size of the plot
