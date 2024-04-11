@@ -32,6 +32,6 @@ for col1 in numerical_df.columns:
     stats_categorical
 
     st.write('Data visualization for ' + str(col1) + " :")
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=True)
     st.divider()
 
