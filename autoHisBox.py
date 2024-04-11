@@ -15,7 +15,7 @@ df = pd.read_csv('train.csv')
 numerical_df = df.select_dtypes(include='number')
 
 st.title('auto Exploratory Data Analysis')
-# st.set_page_config(page_title="Superstore!!!", page_icon=":bar_chart:",layout="wide")
+st.set_page_config(page_title="auto EDA", page_icon=":bar_chart:",layout="wide")
 
 for col1 in numerical_df.columns:
     # Create a figure with two subplots (boxplot and histogram)
