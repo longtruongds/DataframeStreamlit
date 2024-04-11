@@ -8,6 +8,10 @@ import pandas as pd
 import seaborn as sns
 import streamlit as st
 import matplotlib.pyplot as plt
+import warnings
+
+# Ignore all warnings
+warnings.filterwarnings("ignore")
 
 # Load CSV data into a pandas DataFrame
 @st.cache
