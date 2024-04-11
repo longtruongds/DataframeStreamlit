@@ -14,7 +14,7 @@ df = pd.read_csv('train.csv')
 # Select only numerical columns
 numerical_df = df.select_dtypes(include='number')
 
-st.title('auto Explozation Data Analysis')
+st.title('auto Exploratory Data Analysis')
 
 for col1 in numerical_df.columns:
     # Create a figure with two subplots (boxplot and histogram)
