@@ -24,7 +24,7 @@ cols.insert(0, cols.pop(cols.index('SalePrice')))
 heatmap_df = numeric_df.loc[:, cols]
 
 # Create a heatmap using Seaborn
-plt.figure(figsize=(40, 16))  # Set the size of the plot
+plt.figure(figsize=(50, 40))  # Set the size of the plot
 sns.heatmap(heatmap_df.corr(), annot=True, cmap="coolwarm", linewidths=0.5)
 
 # Assign the plot to the variable fig1
