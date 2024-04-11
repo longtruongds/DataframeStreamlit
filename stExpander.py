@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import streamlit as st
+import numpy as np
 
 st.bar_chart({"data": [1, 5, 2, 6, 2, 1]})
 
