@@ -29,4 +29,5 @@ for col1 in numerical_df.columns:
     stats_categorical
 
     st.pyplot(fig)
+    st.divider()
 
