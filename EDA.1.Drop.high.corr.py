@@ -13,51 +13,19 @@ import seaborn as sns
 import streamlit as st
 
 
-# In[2]:
-
-
-#input_df = pd.read_csv('train_final.csv')
 input_df = pd.read_csv('train_FE.csv')
-
-
-# In[3]:
-
-
 numeric_df = input_df.select_dtypes(exclude=['object'])
-
-
-# In[4]:
-
-
-numeric_df.columns
-
-
-# In[5]:
-
-
+# numeric_df.columns
 drop_cols=['Unnamed: 0']
 numeric_df = numeric_df.drop(drop_cols, axis=1)
-
-
-# In[6]:
-
-
-numeric_df.columns
-
-
-# In[7]:
-
+# numeric_df.columns
 
 # Kỹ thuật chuyển cột SalePrice thành cột đầu tiên
 cols = list(numeric_df)
 # move the column to head of list using index, pop and insert
 cols.insert(0, cols.pop(cols.index('SalePrice')))
 heatmap_df = numeric_df.loc[:, cols]
-# plt.figure(figsize=(20, 10))
-# sns.heatmap(heatmap_df.corr(), annot=True)
 
-
-# In[8]:
 
 
 # Create a heatmap using Seaborn
