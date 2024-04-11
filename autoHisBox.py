@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+# from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # Load your CSV data into a DataFrame
 df = pd.read_csv('train.csv')
