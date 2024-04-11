@@ -19,17 +19,18 @@ numerical_df = df.select_dtypes(include=["float64", "int64"])
 
 
 
+
 # Separate features and target columns
 target_column = numerical_df["SalePrice"]
 feature_columns = df.columns[df.columns != target_column]
-
 
 # Calculate correlation between features and target
 correlation_matrix = numerical_df.corr()
 target_correlations = correlation_matrix[target_column].abs().sort_values(ascending=False)
 
 # Select top 10 features with highest absolute correlation
-top_features = target_correlations.index[1:11]  # Exclude the target column itself
+n = 10
+top_features = target_correlations.index[1:n+1]  # Exclude the target column itself
 
 # Create a new DataFrame with only the selected features
 selected_df = numerical_df[top_features]
