@@ -19,10 +19,10 @@ numerical_df = df.select_dtypes(include=["float64", "int64"])
 
 
 
-
 # Separate features and target columns
-target_column = numerical_df.columns[-1]
-feature_columns = numerical_df.columns[:-1]
+target_column = numerical_df["SalePrice"]
+feature_columns = df.columns[df.columns != target_column]
+
 
 # Calculate correlation between features and target
 correlation_matrix = numerical_df.corr()
