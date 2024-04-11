@@ -9,7 +9,7 @@ import plotly.express as px
 import streamlit as st
 
 # Load CSV data into a Pandas DataFrame
-df = pd.read_csv("train.csv")
+df = pd.read_csv('train.csv')
 
 # Select only the numerical columns from the main DataFrame
 numerical_df = df.select_dtypes(include=["float64", "int64"])
