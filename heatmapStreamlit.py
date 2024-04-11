@@ -29,8 +29,10 @@ categorical_df = data.select_dtypes(include=["object"])
 st.write("Heatmap of Correlation Matrix:")
 corr_matrix = numerical_df.corr()
 plt.figure(figsize=(10, 8))
-sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", linewidths=0.5)
-st.pyplot()
+# sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", linewidths=0.5)
+# st.pyplot()
+fig1 = sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", linewidths=0.5)
+st.pyplot(fig1)
 
 # Display the DataFrames
 st.write("Numerical DataFrame:")
