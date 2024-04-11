@@ -22,12 +22,14 @@ for col1 in numerical_df.columns:
     # Histogram
     sns.histplot(data=numerical_df, x=col1, ax=ax_hist, color='blue')
     # Remove x-axis label for the boxplot
-    # ax_box.set(xlabel='')
+    ax_box.set(xlabel='')
+    
+    st.write('Statistic describle for ' + str(col1))
 
     stats_categorical = numerical_df[col1].describe().round(2)
     stats_categorical
 
-    st.write('Data analysis for ' + str(col1))
+    st.write('Data visualization for ' + str(col1))
     st.pyplot(fig)
     st.divider()
 
